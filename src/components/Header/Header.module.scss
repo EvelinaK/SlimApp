@@ -1,0 +1,128 @@
+@import '../../shared-styles/reset';
+@import '../../shared-styles/mixins';
+@import '../../shared-styles/colors';
+
+.sectionHeader {
+  border-bottom: 2px solid $header-border;
+  @include for-size(desktop){
+    border-bottom: 0;
+  }
+}
+
+.mainHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  // border-bottom: 2px solid $header-border;
+  @include for-size(tablet) {
+    padding-top: 17px;
+    padding-bottom: 19px;
+  }
+
+  @include for-size(desktop) {
+    border: 0;
+    padding-top: 123px;
+    padding-bottom: 0;
+    justify-content: flex-start;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  position: relative;
+
+  @include for-size(tablet) {
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 147px;
+    // height: 100%;
+  }
+  @include for-size(desktop) {
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 153px;
+    height: 100%;
+    margin-right: 22px;
+  }
+  // &::after {
+  //   position: absolute;
+  //   @include for-size(desktop) {
+  //     background-color: #e0e0e0;
+  //     content: '';
+  //     display: inline-block;
+  //     width: 3px;
+  //     height: 30px;
+  //     top: 35px;
+  //     left: 190px;
+  //   }
+  // }
+}
+.mobUserInfoWrap {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.userInfoSection {
+  background-color: $secondary-beckground; 
+}
+.navigationAuth {
+  // margin-left: 106px;
+  display: flex;
+  align-items: center;
+  @include for-size(tablet) {
+    margin-left: 0;
+    align-items: center;
+    padding-top: 0;
+  }
+  @include for-size(desktop) {
+    margin-left: 40px;
+    padding-top: 40px;
+    width: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.navigation {
+  // margin-left: 65px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  @include for-size(tablet) {
+    // margin-left: 270px;
+  }
+  @include for-size(desktop) {
+    height: 32px;
+    border-left: 3px solid #E0E0E0;
+    padding-left: 22px;
+    // padding: 0;
+    margin-left: 0;
+  }
+}
+.logoLink {
+  // @include for-size(tablet) {
+  //   height: 44px;
+  // }
+  // @include for-size(desktop) {
+  //   height: unset;
+  // }
+  text-decoration: none;
+}
+.closeBtn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $main-text;
+  font-size: 20px;
+  @include for-size(tablet) {
+    margin-left: 48.5px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}

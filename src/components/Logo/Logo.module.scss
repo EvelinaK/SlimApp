@@ -1,0 +1,66 @@
+@import "../../shared-styles/reset";
+@import "../../shared-styles/mixins";
+@import "../../shared-styles/colors";
+
+.logoSvg {
+  display: block;
+  width: 47px;
+  height: 44px;
+  @include for-size(tablet) {
+    position: absolute;
+    left: -17px;
+    width: 47px;
+    height: 44px;
+  }
+  @include for-size(desktop) {
+    position: absolute;
+    left: -25px;
+    bottom: 5px;
+    width: 70px;
+    height: 66px;
+  }
+}
+
+.logoText {
+  width: 106px;
+  padding: 12px 10px;
+  display: flex;
+  // display: none;
+  font-family: "GothamPro-Light";
+  font-size: 20px;
+  @include for-size(tablet) {
+    padding: 0;
+    padding-top: 13px;
+  }
+  @include for-size(desktop) {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    // width: 130px;
+    height: 32px;
+    padding-top: 0;
+    // padding-top: 40px;
+  }
+}
+.logoTextSlim {
+  display: block;
+  color: $main-text;
+  font-size: 24px;
+  // margin-right: 6px;
+  @include for-size(desktop) {
+    letter-spacing: 0.06em;
+    // position: absolute;
+    // left: -10px;
+  }
+}
+.logoTextMom {
+  display: block;
+  color: $accent;
+  font-size: 24px;
+  @include for-size(desktop) {
+    letter-spacing: 0.06em;
+    // position: absolute;
+    // right: 0;
+  }
+}

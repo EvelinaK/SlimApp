@@ -1,0 +1,110 @@
+@import '../../shared-styles/mixins.scss';
+@import '../../shared-styles/colors.scss';
+
+.registrationForm > h1 {
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+
+  color: $accent;
+
+  margin-bottom: 60px;
+  @include for-size(tablet) {
+    margin-bottom: 40px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 60px;
+  }
+}
+.registrationForm {
+  font-family: Verdana;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  align-items: center;
+  @include for-size(tablet) {
+    padding-top: 191px;
+    align-items: flex-start;
+  }
+  @include for-size(desktop) {
+    align-items: flex-start;
+    padding-top: 89px;
+  }
+
+  background-color: transparent;
+}
+.registrationInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 60px;
+  @include for-size(tablet) {
+    margin-bottom: 40px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 60px;
+  }
+
+  & .inputField {
+    height: 36px;
+    width: 289px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.214;
+    letter-spacing: 0.04em;
+
+    color: $secondary-text;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $secondary-text;
+  }
+}
+.registrationButtons {
+  display: flex;
+  flex-direction: column;
+  @include for-size(tablet) {
+    flex-direction: row;
+  }
+  @include for-size(desktop) {
+    flex-direction: row;
+  }
+
+  & button:first-child {
+    @include for-size(tablet) {
+      margin-right: 30px;
+    }
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
+  }
+}
+.formLabel {
+  position: relative;
+  width: fit-content;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+.validField {
+  font-family: 'Verdana';
+  position: absolute;
+  color: rgb(238, 20, 20);
+  top: 45px;
+  left: 0px;
+
+  font-size: 12px;
+  line-height: 1.415;
+  letter-spacing: 0.04em;
+}
+.formLabel .errorInput {
+  border-bottom: 1px solid red;
+  background-color: rgba(228, 161, 161, 0.1);
+  color: red;
+}
+.errorInput::placeholder {
+  color: red;
+}

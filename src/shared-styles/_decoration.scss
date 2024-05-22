@@ -1,0 +1,292 @@
+section.decoration {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @media screen and (min-width: 650px){
+    display: block;
+    min-height: 1024px;
+    height: 100%;
+  }
+  @media screen and (min-width: 650px){
+    min-height: 850px;
+  }
+  //!dec-spot ----------------------------------
+  .dec-spot {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 461px;
+      right: -32px;
+      width: 553px;
+      height: 750px;
+      background-image: url('../img/spot-tablet.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: 34px;
+      right: 0;
+      width: 603px;
+      height: 816px;
+      background-image: url('../img/spot.png');
+    }
+  }
+  //!dec-strawberry ----------------------------------
+  .dec-strawberry {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: 547px;
+      right: 68px;
+      width: 265px;
+      height: 273px;
+      background-image: url('../img/strawberry@1x.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: 458px;
+      right: 2px;
+      width: 362px;
+      height: 374px;
+      background-image: url('../img/strawberry@1x.png');
+    }
+  }
+  //!dec-leaves ----------------------------------
+  .dec-leaves {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 215px;
+      top: 455px;
+      width: 531px;
+      height: 602px;
+      transform: rotate(90deg);
+      background-image: url('../img/leaves@1x.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: 0;
+      right: 195px;
+      width: 746px;
+      height: 846px;
+      transform: rotate(0);
+      background-image: url('../img/leaves@1x.png');
+    }
+  }
+  //!dec-banana ----------------------------------
+  .dec-banana {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 593px;
+      right: -249px;
+      width: 740px;
+      height: 527px;
+      background-image: url('../img/banana@1x.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: -102px;
+      right: -287px;
+      width: 773px;
+      height: 552px;
+      background-image: url('../img/banana@1x.png');
+    }
+  }
+}
+//? ======================LOGN PAGE =================================
+section.decoration-login {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @media screen and (min-width: 650px){
+    display: block;
+    min-height: 1024px;
+    height: 100%;
+  }
+  @media screen and (min-width: 650px){
+    min-height: 850px;
+  }
+  //?dec-spot ----------------------------------
+  .dec-spot {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 461px;
+      right: -32px;
+      width: 553px;
+      height: 750px;
+      background-image: url('../img/spot-tablet.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: 0px;
+      right: 0px;
+      width: 715px;
+      height: 849px;
+      background-image: url('../img/spot-login.png');
+    }
+  }
+  //?dec-strawberry ----------------------------------
+  .dec-strawberry {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 412px;
+      right: -66px;
+      width: 370px;
+      height: 382px;
+      background-image: url('../img/strawberry@1x.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: 165px;
+      right: 27px;
+      width: 362px;
+      height: 374px;
+      background-image: url('../img/strawberry@1x.png');
+    }
+  }
+  //?dec-leaves ----------------------------------
+  .dec-leaves {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: -97px;
+      right: 12px;
+      width: 740px;
+      height: 842px;
+      background-image: url('../img/leaves-login-tablet@1x.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: -26px;
+      right: 250px;
+      width: 746px;
+      height: 846px;
+      background-image: url('../img/leaves-login@1x.png');
+    }
+  }
+  //?dec-banana ----------------------------------
+  .dec-banana {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 593px;
+      right: -249px;
+      width: 740px;
+      height: 527px;
+      background-image: url('../img/banana@1x.png');
+    }
+    @media screen and (min-width: 1100px) {
+      top: 366px;
+      right: -204px;
+      width: 773px;
+      height: 552px;
+      background-image: url('../img/banana@1x.png');
+    }
+  }
+}
+//todo ======================CALCULATION PAGE =================================
+@media screen and (min-width: 320px) {
+  section.decoration-calculation {
+    position: absolute;
+    top: 0px;
+    z-index: -1000;
+    width: 100vw;
+    min-height: 1160px;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      #fff,
+      #fff 664px,
+      $secondary-beckground 664px,
+      $secondary-beckground 100%
+    );
+  }
+}
+
+@media screen and (min-width: 650px) {
+  section.decoration-calculation {
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+    width: 100vw;
+    min-height: 1024px;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      #fff,
+      #fff 674px,
+      $secondary-beckground 674px,
+      $secondary-beckground 100%
+    );
+  }
+  // @include for-size(tablet) {
+  //   width: 270px;
+  //   position: absolute;
+  //   top: 13px;
+  //   right: 38px;
+  //   height: 362px;
+
+  //   background-image: url('../../img/rightSideBarBottom@1x.png');
+  //   background-repeat: no-repeat;
+  // }
+  .dec-leaves {
+    width: 362px;
+    height: 369px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-image: url('../img/rightSideBarBottom@1x.png');
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1100px) {
+  section.decoration-calculation {
+    position: absolute;
+    top: 0;
+    z-index: -1000;
+    width: 100vw;
+    height: 100%;
+    min-height: 850px;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      #fff,
+      #fff calc(50% + 105px),
+      $secondary-beckground calc(50% + 105px),
+      $secondary-beckground 100%
+    );
+  }
+  
+  .dec-leaves {
+    width: 505px;
+    height: 777px;
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    background-image: url('../img/rightSideBar@1x.png');
+    background-repeat: no-repeat;
+  }
+}

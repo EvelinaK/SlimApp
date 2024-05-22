@@ -1,0 +1,17 @@
+.search-list-enter {
+    transform: translateY(-100%);
+  }
+  
+  .search-list-enter-active {
+    transform: translateY(0);
+    transition: all 500ms linear;
+  }
+  
+  .search-list-exit {
+    transform: translateY(0);
+  }
+  
+  .search-list-exit-active {
+    transform: translateY(-100%);
+    transition: all 500ms linear;
+  }

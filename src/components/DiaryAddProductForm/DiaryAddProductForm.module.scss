@@ -1,0 +1,337 @@
+@import '../../shared-styles/colors';
+@import '../../shared-styles/mixins';
+
+.triggerButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  color: #fff;
+  background-color: $accent;
+  font-size: 40px;
+
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+}
+
+.autocomplete {
+  background-color: #fff;
+  color: black;
+  height: 100%;
+  width: 290px;
+  pointer-events: all;
+
+  @media screen and (min-width: 650px) {
+    width: 240px;
+    font-size: 14px;
+    font-family: 'Verdana';
+  }
+
+  overscroll-behavior: contain;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  & li {
+    text-align: left;
+
+    transition: all 250ms linear;
+
+    &:hover,
+    &:focus {
+      background-color: $secondary-text;
+      color: #fff;
+    }
+  }
+}
+
+.autocompleteItem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.scrollbar {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: thin;
+  scrollbar-color: $burger-background $secondary-beckground;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: $secondary-beckground;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: $burger-background;
+  border-radius: 0px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:vertical {
+  min-height: 1.5rem;
+}
+.scrollbar::-webkit-scrollbar-thumb:horizontal {
+  min-width: 1.5rem;
+}
+
+.productListWrapper {
+  position: absolute;
+  left: 5px;
+  top: 20px;
+  z-index: 3;
+  pointer-events: none;
+
+  height: 100px;
+  width: 290px;
+
+  overflow: hidden;
+
+  background-color: transparent;
+}
+
+.buttonWrapper {
+  width: 100%;
+
+  position: relative;
+
+  & button {
+    position: absolute;
+    top: -24px;
+    left: 2px;
+
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.modal {
+  width: 320px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+
+  position: absolute;
+  top: 147px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modalForm {
+  min-width: 300px;
+  margin-top: 80px;
+
+  @media screen and (max-width: 1100px) {
+    margin-bottom: 52px;
+  }
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & input {
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+
+    &.gramms {
+      margin-right: 0px;
+
+      @media screen and (min-width: 650px) {
+        text-align: right;
+      }
+    }
+
+    color: $secondary-text;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $secondary-text;
+    width: 239px;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  & button {
+    margin-top: 60px;
+
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+.addButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+
+  color: #fff;
+  background-color: $accent;
+  font-size: 40px;
+}
+
+.addForm {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+
+  & input {
+    font-family: Verdana;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+
+    color: $secondary-text;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $secondary-text;
+    min-width: 105px;
+    min-height: 35px;
+
+    margin-right: 48px;
+
+    &:first-child {
+      margin-right: 30px;
+      width: 220px;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .gramms::placeholder {
+    text-align: right;
+  }
+
+  .modalForm {
+    flex-direction: row;
+    align-items: center;
+
+    & input.gramms {
+      width: 105px;
+    }
+
+    & button {
+      margin: 0;
+      margin-left: 48px;
+    }
+
+    & input {
+      min-height: 35px;
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+
+  .productListWrapper {
+    position: absolute;
+    z-index: 3;
+
+    left: 0px;
+    top: 34px;
+  }
+}
+
+.plusButton {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $accent;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(252, 132, 45, 0.5);
+
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 35px;
+}
+
+@media screen and (min-width: 1100px) {
+  .modalForm {
+    margin-top: 0px;
+    margin-bottom: 60px;
+  }
+}
+
+.triggerButtonWrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+// .errorMes {
+//   // @extend .errorInput;
+//   color: red;
+//   border-bottom: none;
+//   background-color: none;
+// }
+//? ----input ------
+.errorInput {
+  // @extend .errorMes;
+  border-bottom: 1px solid red;
+  background-color: rgba(228, 161, 161, 0.1);
+}
+.errorInput::placeholder {
+  color: red;
+}
+.errorMes {
+  // @extend .errorInput;
+  color: red;
+
+  @include for-size(desktop) {
+    font-size: 14px;
+  }
+}
+
+.validField {
+  font-family: 'Verdana';
+  position: absolute;
+  color: rgb(238, 20, 20);
+  top: 25px;
+  left: 0px;
+
+  @media screen and (min-width: 650px) {
+    top: 35px;
+  }
+
+  font-size: 12px;
+  line-height: 1.415;
+  letter-spacing: 0.04em;
+}
+
+.formLabel {
+  position: relative;
+  width: fit-content;
+}
+
+@media screen and (max-width: 650px) {
+  input.gramms {
+    z-index: 0;
+  }
+
+  .modalForm input {
+    width: 290px;
+  }
+}

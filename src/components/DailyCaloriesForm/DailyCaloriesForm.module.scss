@@ -1,0 +1,350 @@
+@import '../../shared-styles/colors';
+@import '../../shared-styles/mixins';
+.leaf{
+  position: absolute;
+  left: 90%;
+  animation: anim  20s linear infinite;
+  transition-duration: 9s;
+  height: 40px;
+  }
+
+.leaf2{
+    height: 40px;  
+}
+
+.cont div {
+  position: absolute;
+  left: 90%;
+} 
+.cont2 div {
+  transform: scale(2) rotateY(180deg);
+  filter: blur(2px);
+}
+
+.leaf:nth-child(1){
+  left:22%;
+  animation: anim 18s linear infinite;
+animation-delay: -7s;
+}
+.leaf:nth-child(2){
+  left: 60%;
+   animation: anim 16s linear infinite;
+   animation-delay: -5s;
+}
+.leaf:nth-child(3){
+  left: 48%;
+   animation: anim 20s linear infinite;
+   animation-delay: -3s;
+}
+.leaf:nth-child(4){
+  left: 53%;
+   animation: anim 21s linear infinite;
+   animation-delay: -5s
+}
+.leaf:nth-child(5){
+  left: 12%;
+   animation: anim 14s linear infinite;
+   animation-delay: -6s;
+}
+
+.leaf:nth-child(6){
+  left: 44%;
+   animation: anim 22s linear infinite;
+   animation-delay: -2s;
+}
+.leaf:nth-child(7){
+  left: 51%;
+   animation: anim 22s linear infinite;
+}
+.leaf:nth-child(8){
+  left: 30%;
+   animation: anim 14s linear infinite;
+   animation-delay: -5s;
+}
+@keyframes anim{
+  0%{
+    opacity: 0;
+    top:-10%;
+    transform: translateX(15px)
+    rotate(0deg);
+  }
+    10%{
+      top:-10%;
+      opacity: 1;
+      transform:translateX(-15px)
+      rotate(45deg);}
+     20%{
+        transform: translateX(-20px)
+        rotate(85deg);}
+     60%{
+
+        transform: translateX(-15px)
+        rotate(90deg);}
+      80%{
+        transform: translateX(25px)
+        rotate(130deg);}
+      100%{
+        top:110%;
+        transform: translateX(-15px)
+        rotate(225deg);
+          }
+}
+
+.DailyCaloriesFormFirstWrapper {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.DailyCaloriesFormWrapper {
+  padding-top: 30px;
+  width: 100%;
+  font-family: 'Verdana';
+  // margin-bottom: 40px;
+}
+.DailyCaloriesFormGeneralWrapper {
+  margin-bottom: 23px;
+  // margin-bottom: 0;
+
+}
+.DailyCaloriesFormTitle {
+  font-family: VerdanaBold, sans-serif;
+  color: $main-text;
+  font-size: 18px;
+  line-height: 1.444;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.DailyCaloriesFormBloodTitle {
+  color: $secondary-text;
+  font-size: 14px;
+  line-height: 1.215;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.DailyCaloriesForm {
+  width: 240px;
+  margin: 0 auto;
+  // margin-bottom: 60px;
+  // height: 354px;
+}
+.DailyCaloriesFormBloodWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  // margin-bottom: 42px;
+}
+.DailyCaloriesFormFieldsWrapper {
+  position: relative;
+  margin-bottom: 6px;
+}
+.DailyCaloriesFormInput {
+  font-family: 'VerdanaBold';
+  font-size: 14px;
+  line-height: 1.215;
+  letter-spacing: 0.04em;
+  margin-top: 1px;
+  color: $secondary-text;
+  padding: 0.6em;
+  width: 239px;
+  border: none;
+  border-bottom: 1px solid $secondary-text;
+  background: transparent;
+  outline: none;
+  &::placeholder {
+    color: rgba(155, 159, 170, 0.5);
+    font-size: 14px;
+  }
+  @include for-size(tablet) {
+    display: flex;
+    width: 240px;
+  }
+}
+.DailyCaloriesFormFieldsLabelText {
+  // margin-top: 4px;
+  font-family: 'VerdanaBold';
+  color: rgba(155, 159, 170, 0.5);
+  display: inline-block;
+  height: 17px;
+  font-size: 12px;
+  line-height: 1.215;
+  letter-spacing: 0.04em;
+}
+
+
+
+label.errorMessage ~ .DailyCaloriesFormFieldsLabelText {
+  display: none;
+}
+.errorInput {
+  border-bottom: 1px solid red;
+  background-color: rgba(228, 161, 161, 0.1);
+}
+.errorMessage {
+  font-family: VerdanaBold, sans-serif;
+  color: red;
+  display: inline-block;
+  height: 17px;
+  font-size: 12px;
+  line-height: 1.215;
+  letter-spacing: 0.04em;
+}
+.DailyCaloriesFormLabel {
+  color: $main-text;
+}
+.DailyCaloriesFormButton {
+  display: block;
+  margin: 0 auto;
+}
+
+[type='radio']:checked,
+[type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type='radio'] + label,
+[type='radio'] + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+[type='radio'] + label:before,
+[type='radio'] + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+[type='radio'] + label:after,
+[type='radio'] + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: $accent;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type='radio']:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type='radio']:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+@media screen and (min-width: 650px) {
+  .DailyCaloriesFormWrapper {
+    width: 605px;
+    padding-top: 100px;
+    margin: 0;
+  }
+  .DailyCaloriesFormGeneralWrapper {
+    display: flex;
+    margin-bottom: 23px;
+  }
+  .DailyCaloriesFormFieldsContainer {
+    margin-right: 30px;
+  }
+  .DailyCaloriesFormFirstWrapper {
+    flex-direction: row;
+  }
+  .DailyCaloriesFormTitle {
+    font-family: VerdanaBold, sans-serif;
+    font-size: 30px;
+    line-height: 1.529;
+    margin-bottom: 60px;
+  }
+  .DailyCaloriesFormInput {
+    font-family: 'VerdanaBold';
+    font-size: 14px;
+    line-height: 1.215;
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+    margin-bottom: 21px;
+    color: $secondary-text;
+    padding: 0.6em;
+    width: 239px;
+    border: none;
+    border-bottom: 1px solid $secondary-text;
+    background: transparent;
+  }
+  .DailyCaloriesFormFieldsLabelText {
+    font-family: 'VerdanaBold';
+    color: rgba(155, 159, 170, 0.5);
+    display: inline-block;
+    height: 17px;
+    font-size: 14px;
+    line-height: 1.215;
+    letter-spacing: 0.04em;
+  }
+  .errorMessage {
+    font-size: 14px;
+  }
+  .errorInput {
+    border-bottom: 1px solid red;
+    background-color: rgba(228, 161, 161, 0.1);
+  }
+  .DailyCaloriesForm {
+    width: 510px;
+    // height: 290px;
+  }
+  .DailyCaloriesFormBloodTitle {
+    margin-bottom: 19px;
+    color: rgba(155, 159, 170, 0.5);
+  }
+  .DailyCaloriesFormFieldsWrappers {
+    margin-bottom: 0;
+    margin-right: 31px;
+  }
+  .DailyCaloriesFormButton {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .DailyCaloriesFormWrapper {
+    width: 605px;
+    padding-top: 137px;
+  }
+  .DailyCaloriesFormTitle {
+    font-family: VerdanaBold, sans-serif;
+    font-size: 34px;
+    line-height: 1.205;
+    margin-bottom: 68px;
+  }
+  .DailyCaloriesForm {
+    width: 522px;
+  }
+  .DailyCaloriesFormButton {
+    margin-left: auto;
+    // margin-right: -12px;
+  }
+}
+.SmallLoaderContainerHome {
+  position: absolute;
+  top: 83%;
+  left: 40%;
+  @include for-size(tablet) {
+    top: 66%;
+    left: 50%;
+  }
+  @include for-size(desktop) {
+    top: 90%;
+    left: 50%;
+  }
+}

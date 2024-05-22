@@ -1,0 +1,34 @@
+.alert-global{
+  position: fixed;
+  z-index: 9999;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  @include for-size(tablet) {
+    width: 400px;
+  }
+  @include for-size(desktop) {
+    width: 600px;
+  }
+  padding: 1em 0.5em;
+  border-radius: 6px;
+  border: 1px solid $alert-global-border;
+  background-color: $alert-global-background;
+  color: $alert-global-text;
+  box-shadow: 0 4px 8px rgba(169, 49, 38, 0.459);
+
+  transition: 250ms linear;
+}
+.alert-global-enter{
+  opacity: 0;
+}
+.alert-global-enter-active{
+  opacity: 1;
+}
+.alert-global-exit{
+  opacity: 1;
+}
+.alert-global-exit-active{
+  opacity: 0;
+}

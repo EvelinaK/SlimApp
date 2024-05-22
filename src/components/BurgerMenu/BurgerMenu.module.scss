@@ -1,0 +1,71 @@
+@import '../../shared-styles/reset';
+@import '../../shared-styles/mixins';
+@import '../../shared-styles/colors';
+
+.burgerMenu {
+  background-color: $burger-background;
+  position: absolute;
+  display: block;
+  z-index: 2;
+  min-width: 320px;
+  left: 0;
+  right: 0;
+  @include for-size(desktop){
+    display: none;
+  }
+}
+.burgerSvg {
+  display: block;
+  width: 18px;    //!------------
+  height: 12px;  //!-----------
+  @include for-size(tablet) {
+    margin-left: 53px;
+    margin-right: 3px;
+    // padding-top: 2px;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: $accent;
+  }
+}
+.burgerMenuList {
+  padding-top: 60px;
+  width: 100%;
+  height: 488px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  min-width: 320px;
+
+  & :not(:last-child) {
+    margin-bottom: 15px;
+    @include for-size(tablet) {
+      margin-bottom: 15px;
+    }
+  }
+  @include for-size(tablet) {
+    padding-top: 108px;
+    height: 944px;
+  }
+}
+.burgerMenuItemDiary {
+  text-align: center;
+  text-decoration: none;
+  color: $secondary-text;
+  font-family: 'VerdanaBold';
+  font-size: 18px;
+  @include for-size(tablet) {
+    font-size: 24px;
+  }
+}
+.burgerMenuItemCalc {
+  text-align: center;
+  text-decoration: none;
+  color: $main-background;
+  font-family: 'VerdanaBold';
+  font-size: 18px;
+  @include for-size(tablet) {
+    font-size: 24px;
+  }
+}

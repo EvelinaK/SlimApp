@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Verdana';
+  src: url('./fonts/verdana.woff2');
+}
+
+@font-face {
+  font-family: 'VerdanaBold';
+  src: url('./fonts/VerdanaBold.woff2');
+}
+
+@font-face {
+  font-family: 'GothamPro-Light';
+  src: url('./fonts/GothamPro-Light.woff');
+}
+
+@font-face {
+  font-family: 'GothamPro-Bold';
+  src: url('./fonts/GothamPro-Bold.woff');
+}
+
+button {
+  cursor: pointer;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+   }
+  ::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+    }
+  /* optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+  background: #FF0000;
+   }
