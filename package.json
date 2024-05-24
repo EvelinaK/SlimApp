@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Poltavskiyalexander/slimmom.git"
+    "type": "git"
   },
   "resolutions": {
     "styled-components": "^5"
@@ -38,8 +37,8 @@
     "yup": "^0.32.8"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
