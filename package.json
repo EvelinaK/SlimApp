@@ -46,6 +46,10 @@
     "lint": "eslint",
     "format": "npx prettier --write ."
   },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
