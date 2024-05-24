@@ -1,14 +1,14 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer } from '@reduxjs/toolkit';
 
 const alertReducer = createReducer(null, {
-  'alert.off': (state)=>({
+  'alert.off': (state) => ({
     ...state,
-    error: null
+    error: null,
   }),
-  'alert.on': (state, {payload})=>({
+  'alert.on': (state, { payload }) => ({
     ...state,
-    error: payload.error
-  })
-})
+    error: payload.error,
+  }),
+});
 
 export default alertReducer;

@@ -1,6 +1,5 @@
-@import "../../shared-styles/_colors.scss";
-@import "../../shared-styles/mixins";
-
+@import '../../shared-styles/_colors.scss';
+@import '../../shared-styles/mixins';
 
 nav {
   height: 80px;
@@ -8,18 +7,18 @@ nav {
 }
 
 .container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  @include for-size(desktop){
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include for-size(desktop) {
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 15px;
   }
-  @include for-size(desktop){
+  @include for-size(desktop) {
     // padding-top: 40px;
   }
 }
@@ -28,10 +27,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  @include for-size(tablet){
+  @include for-size(tablet) {
     align-items: flex-end;
   }
-  @include for-size(desktop){
+  @include for-size(desktop) {
     align-items: center;
   }
 }
@@ -52,18 +51,14 @@ nav {
 }
 
 .navContainer a :hover {
-    color: $main-text;
+  color: $main-text;
 }
 
 .active > span {
   color: $main-text;
 }
 
-// @media (min-width: 650px) {
-//   .container {
-//     padding: 0px 75px;
-//   }
-// }
+
 
 @media (min-width: 1100px) {
   nav {
@@ -72,7 +67,4 @@ nav {
     border-bottom: none;
   }
 
-  // .navContainer {
-  //   display: none;
-  // }
 }

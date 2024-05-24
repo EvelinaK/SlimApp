@@ -1,26 +1,25 @@
-import axios from "axios";
+import axios from 'axios';
 
-const url = "https://slimmom-backend.goit.global/"; //'https://slimmom-backend.herokuapp.com/';
+const url = 'https://slimmom-backend.goit.global/'; //'https://slimmom-backend.herokuapp.com/';
 
 axios.defaults.baseURL = url;
 
 class PhonebookService {
-  //===================  auth ===================
 
   register(newUser) {
-    return axios.post("/auth/register", newUser);
+    return axios.post('/auth/register', newUser);
   }
 
   login(userCredentials) {
-    return axios.post("/auth/login", userCredentials);
+    return axios.post('/auth/login', userCredentials);
   }
 
   logout() {
-    return axios.post("/auth/logout");
+    return axios.post('/auth/logout');
   }
 
   getCurrentUser() {
-    return axios.get("/user");
+    return axios.get('/user');
   }
 
   setToken(token) {
@@ -47,19 +46,14 @@ class PhonebookService {
   }
 
   addProduct(product) {
-    //  product = {
-    //     "date": "2020-12-31",
-    //     "productId": "5d51694802b2373622ff552c",
-    //     "weight": 100
-    //   }
-    return axios.post("/day", product);
+
+    return axios.post('/day', product);
   }
   getProducts(date) {
-    return axios.post(`/day/info`, date); // дата из календаря для запроса
+    return axios.post(`/day/info`, date); 
   }
   refresh(sid) {
-    console.log(sid);
-    return axios.post(`/auth/refresh`, sid); //сид из store
+    return axios.post(`/auth/refresh`, sid); 
   }
 }
 

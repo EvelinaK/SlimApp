@@ -1,94 +1,81 @@
 @import '../../shared-styles/_colors.scss';
 
-body{
-    padding-top: 100px;  
+body {
+  padding-top: 100px;
 }
 
-
-h1{
-    text-align: center;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color:$accent;
+h1 {
+  text-align: center;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: $accent;
 }
 
 .img {
-   
-    width: 300px; 
-    height: 200px;
-margin: 0 auto;
- 
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
 }
 
 a {
-color:seagreen;
-font-size: 20px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-weight: bold;
-margin-bottom: 15px;
+  color: seagreen;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 a:hover {
-    color:orange;
- }
+  color: orange;
+}
 
 @media screen and (min-width: 650px) {
-    h1{
-        text-align: center;
-        font-size: 40px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        color:$accent;
-    }
-    .img {
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: $accent;
+  }
+  .img {
+    width: 600px;
+    height: 400px;
+  }
+  a {
+    color: seagreen;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
 
-        width: 600px; 
-        height: 400px;
-      
-    }
-    a {
-        color:seagreen;
-        font-size: 40px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        
-        }
-    
-    .link {
+  .link {
     text-decoration: none;
-    color:seagreen;
-    }
-  
+    color: seagreen;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: $accent;
+  }
+  .img {
+    width: 600px;
+    height: 400px;
   }
 
-  @media screen and (min-width: 1100px) {
-    h1{
-        text-align: center;
-        font-size: 30px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        color:$accent;
-    }
-    .img {
-        width: 600px; 
-        height: 400px;
-        }
-
-    a {
-        color:seagreen;
-        font-size: 30px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-
-        
-        }
-    
-    .link {
-    color:seagreen;
-    }
-  
+  a {
+    color: seagreen;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
   }
 
-
-
+  .link {
+    color: seagreen;
+  }
+}

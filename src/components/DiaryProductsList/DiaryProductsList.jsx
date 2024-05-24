@@ -18,32 +18,37 @@ class DiaryProductsList extends Component {
 
   render() {
     let { products } = this.props;
-    
+
     return (
-    <> {this.props.isLoading && <div className={styles.SmallLoaderContainer}><SmallLoader/></div> }
-      
-      <ul className={`${styles.productList} ${styles.scrollbar}`}>
-        {!!products.length &&
-          products.map(product => {
-            return (
-              <DiaryProductsListItem
-              key={product.id}
-              name={product.title}
-              weight={product.weight}
-              cal={product.kcal}
-                productId={product.id}
+      <>
+        {' '}
+        {this.props.isLoading && (
+          <div className={styles.SmallLoaderContainer}>
+            <SmallLoader />
+          </div>
+        )}
+        <ul className={`${styles.productList} ${styles.scrollbar}`}>
+          {!!products.length &&
+            products.map((product) => {
+              return (
+                <DiaryProductsListItem
+                  key={product.id}
+                  name={product.title}
+                  weight={product.weight}
+                  cal={product.kcal}
+                  productId={product.id}
                 />
-                );
-              })}
-      </ul>
-    </>
+              );
+            })}
+        </ul>
+      </>
     );
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   products: userSelectors.getProductsSelectors(state),
-  isLoading: globalSelectors.getLoading(state)
+  isLoading: globalSelectors.getLoading(state),
 });
 
 export default connect(mapStateToProps, { getProducts })(DiaryProductsList);

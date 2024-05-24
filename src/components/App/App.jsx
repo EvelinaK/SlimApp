@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 // import debounce from 'lodash.debounce';
 import { connect } from 'react-redux';
 import { getCurrentUser } from '../../redux/user/userOperations';
-import {authOperations, authSelectors} from '../../redux/auth';
+import { authOperations, authSelectors } from '../../redux/auth';
 import globalSelectors from '../../redux/global/globalSelectors';
 import authActions from '../../redux/auth/authActions';
 
@@ -16,24 +16,22 @@ import Loader from '../shared/Loader';
 import Layout from '../Layout';
 import Alert from '../Alert';
 
-//style
+
 import './App.scss';
 
 class App extends Component {
-
   componentDidMount() {
     this.props.getCurrentUser();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.props.authError && this.props.authError.includes('401')) {      
+    if (this.props.authError && this.props.authError.includes('401')) {
       this.props.clearError();
     }
   }
 
   render() {
-    
-    const routesMap = routes.map(route => {
+    const routesMap = routes.map((route) => {
       return route.privated ? (
         <PrivateRoute key={route.path} {...route} />
       ) : (
@@ -43,7 +41,7 @@ class App extends Component {
 
     return (
       <Fragment>
-      <Alert/>
+        <Alert />
         <Layout>
           <Suspense fallback={<Loader />}>
             <Switch>
@@ -57,16 +55,14 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  // bla: PropTypes.string,
-};
+
 
 const mapStateToProps = (state) => ({
-  authError : globalSelectors.getError(state),
+  authError: globalSelectors.getError(state),
   accessToken: authSelectors.getToken(state),
-  sid : authSelectors.sid(state),
-  isLoading: globalSelectors.getLoading(state), 
-})
+  sid: authSelectors.sid(state),
+  isLoading: globalSelectors.getLoading(state),
+});
 const mapDispatch = {
   getCurrentUser,
   refreshToken: authOperations.refresh,

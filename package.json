@@ -42,7 +42,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "netlify deploy -p"
+    "deploy": "netlify deploy -p",
+    "lint": "eslint",
+    "format": "npx prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -63,6 +65,13 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "prettier": "^3.2.5",
+    "react-error-overlay": "^6.0.9",
     "resolve-url-loader": "^5.0.0"
+  },
+  "resolves": {
+    "react-error-overlay": "6.0.9"
   }
 }

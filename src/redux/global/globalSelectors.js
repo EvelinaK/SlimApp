@@ -1,5 +1,5 @@
-const getLoading = state => state.loading;
-const getError = state => state.error;
+const getLoading = (state) => state.loading;
+const getError = (state) => state.error;
 
 const selectors = {
   getLoading,

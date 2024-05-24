@@ -1,2 +1,2 @@
-export * from './LogoText.jsx'
-export * from './Logo.jsx'
+export * from './LogoText.jsx';
+export * from './Logo.jsx';

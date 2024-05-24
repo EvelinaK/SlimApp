@@ -1,6 +1,6 @@
-@import "../../shared-styles/reset";
-@import "../../shared-styles/mixins";
-@import "../../shared-styles/colors";
+@import '../../shared-styles/reset';
+@import '../../shared-styles/mixins';
+@import '../../shared-styles/colors';
 
 .logoSvg {
   display: block;
@@ -26,21 +26,21 @@
   padding: 12px 10px;
   display: flex;
   // display: none;
-  font-family: "GothamPro-Light";
+  font-family: 'GothamPro-Light';
   font-size: 20px;
   @include for-size(tablet) {
     padding: 0;
     padding-top: 13px;
   }
   @include for-size(desktop) {
-    // position: relative;
+ 
     display: flex;
     align-items: center;
     width: auto;
-    // width: 130px;
+  
     height: 32px;
     padding-top: 0;
-    // padding-top: 40px;
+
   }
 }
 .logoTextSlim {
@@ -50,8 +50,7 @@
   // margin-right: 6px;
   @include for-size(desktop) {
     letter-spacing: 0.06em;
-    // position: absolute;
-    // left: -10px;
+
   }
 }
 .logoTextMom {
@@ -60,7 +59,5 @@
   font-size: 24px;
   @include for-size(desktop) {
     letter-spacing: 0.06em;
-    // position: absolute;
-    // right: 0;
   }
 }

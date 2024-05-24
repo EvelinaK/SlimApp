@@ -10,18 +10,18 @@
   min-width: 320px;
   left: 0;
   right: 0;
-  @include for-size(desktop){
+  @include for-size(desktop) {
     display: none;
   }
 }
 .burgerSvg {
   display: block;
-  width: 18px;    //!------------
-  height: 12px;  //!-----------
+  width: 18px; 
+  height: 12px;
   @include for-size(tablet) {
     margin-left: 53px;
     margin-right: 3px;
-    // padding-top: 2px;
+
   }
   &:hover,
   &:focus {

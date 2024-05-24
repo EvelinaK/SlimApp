@@ -1,13 +1,12 @@
-@import "../../shared-styles/colors";
-@import "../../shared-styles//mixins";
+@import '../../shared-styles/colors';
+@import '../../shared-styles//mixins';
 
 .user-info-wrapper {
   font-family: Verdana;
   display: flex;
   align-items: center;
   height: 100%;
-  // margin-right: 0;
-  // margin-left: auto;
+
 }
 
 span.user-info-wrapper-item {
@@ -20,27 +19,16 @@ span.user-info-wrapper-item {
 }
 .user-info-wrapper-item {
   @include for-size(desktop) {
-    // padding-bottom: 15px;
+
   }
 }
 .user-info-wrapper-item:last-child {
   position: relative;
 
-  // &::after {
-  //   position: absolute;
-  //   background-color: #e0e0e0;
-  //   content: "";
-  //   display: inline-block;
-  //   width: 3px;
-  //   height: 30px;
-  //   top: -8px;
-  //   left: -5px;
-  // }
+
 }
 
-// .user-info-wrapper-item:not(:last-child) {
-//   margin-right: 15px;
-// }
+
 
 .user-info-wrapper > p {
   display: flex;
@@ -82,7 +70,3 @@ span.user-info-wrapper-item {
     margin-right: 22px;
   }
 }
-
-// @include for-size(tablet) {
-//   width: 650px;
-// }

@@ -2,20 +2,20 @@ const alertOff = () => {
   return {
     type: 'alert.off',
     payload: {
-      error: null
-    }
-  }
-}
+      error: null,
+    },
+  };
+};
 
 const alertOn = (value) => {
   return {
     type: 'alert.on',
     payload: {
-      error: value
-    }
-  }
-}
+      error: value,
+    },
+  };
+};
 
-const alert = {alertOff, alertOn}
+const alert = { alertOff, alertOn };
 
-export default alert
+export default alert;

@@ -11,31 +11,20 @@ class Alert extends Component {
   delayToCloseAlert = null;
 
   componentDidUpdate(prevProps, prevState) {
-    if (
-      this.props.state.error &&
-      this.props.state.error !== prevProps.state.error
-    ) {
+    if (this.props.state.error && this.props.state.error !== prevProps.state.error) {
       clearTimeout(this.delayToCloseAlert);
-      this.setState(state => ({ isAlertShow: true }));
+      this.setState((state) => ({ isAlertShow: true }));
       this.delayToCloseAlert = setTimeout(() => {
-        this.setState(state => ({ isAlertShow: false }));
+        this.setState((state) => ({ isAlertShow: false }));
         this.props.action_alertOff();
       }, 3000);
     }
-    // if(this.props.state.error && this.props.state.error === prevProps.state.error){
-    //? ДЛЯ ДОДАТКОВОЇ АНІМАЦІЇ
-    // }
   }
 
   render() {
-    //console.log(this.props.state.error);
+
     return (
-      <CSSTransition
-        in={this.state.isAlertShow}
-        classNames="alert-global"
-        timeout={250}
-        unmountOnExit
-      >
+      <CSSTransition in={this.state.isAlertShow} classNames="alert-global" timeout={250} unmountOnExit>
         <div className="alert-global">
           <p>{`${this.props.state.error}`}</p>
         </div>
@@ -44,12 +33,12 @@ class Alert extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     state: state,
   };
 };
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     action_alertOff: () => {
       dispatch(action.alertOff());

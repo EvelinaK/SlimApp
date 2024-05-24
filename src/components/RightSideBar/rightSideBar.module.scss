@@ -16,13 +16,12 @@
   @include for-size(desktop) {
     background-color: unset;
     padding-top: 137px;
-    // min-width: 535px;
     min-height: 600px;
     width: 100%;
   }
 }
 
-// Scroll-bar customisation
+
 
 .scrollbar {
   -webkit-overflow-scrolling: touch;
@@ -30,7 +29,7 @@
   scrollbar-width: thin;
   scrollbar-color: $burger-background $secondary-beckground;
 }
-// #FC842D
+
 .scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -49,12 +48,11 @@
   min-width: 1.5rem;
 }
 
-//* scroll standard
+
 .notAllowedProductsList {
   max-height: 152px;
   margin-top: 25px;
   color: $secondary-text;
-  // overflow-y: scroll;
   z-index: 1;
   position: relative;
   overscroll-behavior: contain;
@@ -110,26 +108,10 @@
   }
 }
 .backgroundSideBar {
-  // @include for-size(tablet) {
-  //   width: 270px;
-  //   position: absolute;
-  //   top: 13px;
-  //   right: 38px;
-  //   height: 362px;
 
-  //   background-image: url('../../img/rightSideBarBottom@1x.png');
-  //   background-repeat: no-repeat;
-  // }
   @include for-size(desktop) {
     background-image: none;
-    //   width: 505px;
-    //   position: absolute;
-    //   top: 0px;
-    //   right: 0px;
-    //   height: 777px;
 
-    //   background-image: url('../../img/rightSideBar@1x.png');
-    //   background-repeat: no-repeat;
   }
 }
 
@@ -149,17 +131,7 @@
   color: $secondary-text;
 }
 
-// .conteiner__rightSideBar {
-//   padding: 0 15px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   @include for-size(tablet) {
-//     padding: 0 28px;
-//   }
-//   @include for-size(desktop) {
-//     padding: 0 25px;
-//   }
-// }
+
 
 .rightSideBar {
   display: block;
@@ -175,7 +147,6 @@
   @include for-size(desktop) {
     width: unset;
     margin-right: 0;
-    // width: 330px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;

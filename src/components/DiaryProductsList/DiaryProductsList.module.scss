@@ -51,18 +51,16 @@
   min-width: 1.5rem;
 }
 
-.SmallLoaderContainer{
+.SmallLoaderContainer {
   position: absolute;
 
   left: 120px;
   @include for-size(tablet) {
     bottom: 20%;
-    left: 40%
-    // top: 50px;
-    // left: 200px;
+    left: 40%;
   }
   @include for-size(desktop) {
     bottom: 0;
-    left: 20%
+    left: 20%;
   }
 }

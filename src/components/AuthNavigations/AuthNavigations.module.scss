@@ -1,5 +1,5 @@
-@import "../../shared-styles/mixins";
-@import "../../shared-styles/colors";
+@import '../../shared-styles/mixins';
+@import '../../shared-styles/colors';
 
 .authnav {
   @include for-size(desktop) {
@@ -7,14 +7,14 @@
   }
 }
 
-.link { 
+.link {
   @include for-size(desktop) {
     text-decoration: none;
     color: $secondary-text;
-    font-family: "VerdanaBold";
+    font-family: 'VerdanaBold';
     font-size: 14px;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 22px;
     }
   }
@@ -23,9 +23,7 @@
   @include for-size(desktop) {
     text-decoration: none;
     color: $main-text;
-    font-family: "VerdanaBold";
+    font-family: 'VerdanaBold';
     font-size: 14px;
   }
 }
-
-

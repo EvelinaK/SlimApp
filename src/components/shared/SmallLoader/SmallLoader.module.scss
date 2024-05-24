@@ -1,100 +1,94 @@
 @import '../../../shared-styles/colors';
 @import '../../../shared-styles/mixins';
 
-
 @mixin same-size($sz) {
-	width: $sz;
-	height: $sz;
+  width: $sz;
+  height: $sz;
 }
 
 // loader wrapper - can be used as a backdrop to obscure the rest of the page or given a transparent background/use hsla/rgba
 .loader__wrap {
-	position: fixed;
-	left: 0;
-	top: 0;
-	@include same-size(100%);
-	display: flex;
-	z-index: 1; 
-	// fine for this demo	
+  position: fixed;
+  left: 0;
+  top: 0;
+  @include same-size(100%);
+  display: flex;
+  z-index: 1;
+  // fine for this demo
 }
 
 // container for animation
 .loader {
-	--sz: 7rem;
-	width: calc(var(--sz) * 2);
-	height: var(--sz);
-	margin: auto; // centers along both main and cross axis in flex containers
-	display: flex;
-	justify-content: space-evenly;
+  --sz: 7rem;
+  width: calc(var(--sz) * 2);
+  height: var(--sz);
+  margin: auto; // centers along both main and cross axis in flex containers
+  display: flex;
+  justify-content: space-evenly;
 }
 
-// each half of the animation container
+
 .loader__sq {
-	// size of each loader piece circle/triangle;
-	--p-sz: calc(var(--sz) / 4);
-	// margin offset so each half of the container overlaps a bit
-	--m-offset: calc((var(--p-sz) * -1) * 0.75);
-	position: relative;
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-evenly;
-	height: 100%;
-	width: 100%;
+  // size of each loader piece circle/triangle;
+  --p-sz: calc(var(--sz) / 4);
+  // margin offset so each half of the container overlaps a bit
+  --m-offset: calc((var(--p-sz) * -1) * 0.75);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
 
-	&::before,
-	&::after {
-		@include same-size(var(--p-sz));
-		content: "";
-		position: relative;
-		// transform is what's being animated
-		transform: translateY(calc((var(--sz) - var(--p-sz)) * -1));
-		animation: loader-box-bounce 0.5s cubic-bezier(0.5, 1, 0.89, 1)
-			calc(var(--i) * 0.06s) infinite alternate-reverse;
- 
-	}
+  &::before,
+  &::after {
+    @include same-size(var(--p-sz));
+    content: '';
+    position: relative;
+    // transform is what's being animated
+    transform: translateY(calc((var(--sz) - var(--p-sz)) * -1));
+    animation: loader-box-bounce 0.5s cubic-bezier(0.5, 1, 0.89, 1) calc(var(--i) * 0.06s) infinite alternate-reverse;
+  }
 
-	&:first-of-type {
-		margin-right: var(--m-offset);
+  &:first-of-type {
+    margin-right: var(--m-offset);
 
-		// first el animated and first visual element
-		&::before {
-			--i: 1;
+
+    &::before {
+      --i: 1;
       display: flex;
       justify-content: center;
       background-image: url(../../../img/bananasmall.png);
-    
+
       width: 55px;
       height: 55px;
       background-size: 55px 55px;
       background-repeat: no-repeat;
-			// border: 3px solid #ff7ab5;
-			border-radius: 50%;
-		}
 
-		// second element visually; third el animated
-		&::after {
-			--i: 3;
+      border-radius: 50%;
+    }
+
+
+    &::after {
+      --i: 3;
       display: flex;
       justify-content: center;
       background-image: url(../../../img/strawberry.png);
       width: 55px;
       height: 55px;
       background-size: 55px 55px;
-    background-repeat: no-repeat;
-			// background-color: #c643fb;
-			// make the loader pieces triangles in supporting browsers
-			@supports (clip-path: circle()) {
+      background-repeat: no-repeat;
+      @supports (clip-path: circle()) {
         clip-path: polygon(79% -78%, 103% 101%, 0% 100%);
-				// clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-			}
-		}
-	}
 
-	&:nth-of-type(2) {
-    
-		// third element visually; 2nd el animated
-		&::before {
-			--i: 2;
+      }
+    }
+  }
+
+  &:nth-of-type(2) {
+
+    &::before {
+      --i: 2;
       display: flex;
       justify-content: center;
       background-image: url(../../../img/pear.png);
@@ -102,46 +96,39 @@
       height: 55px;
       background-size: 55px 55px;
       background-repeat: no-repeat;
-		
-		}
-		// fourth element visually, fourth el animated
-		&::after {
-			--i: 4;
-		  display: flex;
+    }
+    // fourth element visually, fourth el animated
+    &::after {
+      --i: 4;
+      display: flex;
       justify-content: center;
       background-image: url(../../../img/pineapple.png);
       width: 55px;
       height: 55px;
       background-size: 55px 55px;
       background-repeat: no-repeat;
-	
-			
-			@supports (clip-path: circle()) {
-				border-radius: 0;
-        clip-path: polygon(79% -78%, 103% 101%, 0% 100%);
-				// clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-			}
-		}
 
-	}
+      @supports (clip-path: circle()) {
+        border-radius: 0;
+        clip-path: polygon(79% -78%, 103% 101%, 0% 100%);
+        // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      }
+    }
+  }
 }
 
 @keyframes loader-box-bounce {
-	to {
-		transform: translateY(0);
-	}
+  to {
+    transform: translateY(0);
+  }
 }
 
-
-
-
-.SmallLoaderContainer{
-    position: absolute;
-    top: 250px;
-    left: 120px;
-    @include for-size(tablet) {
-      top: 50px;
-      left: 200px;
-    }
+.SmallLoaderContainer {
+  position: absolute;
+  top: 250px;
+  left: 120px;
+  @include for-size(tablet) {
+    top: 50px;
+    left: 200px;
+  }
 }
-

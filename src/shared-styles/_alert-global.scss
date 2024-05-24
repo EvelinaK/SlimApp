@@ -1,4 +1,4 @@
-.alert-global{
+.alert-global {
   position: fixed;
   z-index: 9999;
   top: 2em;
@@ -20,15 +20,15 @@
 
   transition: 250ms linear;
 }
-.alert-global-enter{
+.alert-global-enter {
   opacity: 0;
 }
-.alert-global-enter-active{
+.alert-global-enter-active {
   opacity: 1;
 }
-.alert-global-exit{
+.alert-global-exit {
   opacity: 1;
 }
-.alert-global-exit-active{
+.alert-global-exit-active {
   opacity: 0;
 }

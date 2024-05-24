@@ -6,15 +6,15 @@ section.decoration {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  @media screen and (min-width: 650px){
+  @media screen and (min-width: 650px) {
     display: block;
     min-height: 1024px;
     height: 100%;
   }
-  @media screen and (min-width: 650px){
+  @media screen and (min-width: 650px) {
     min-height: 850px;
   }
-  //!dec-spot ----------------------------------
+  //spot ----------------------------------
   .dec-spot {
     display: none;
     @media screen and (min-width: 650px) {
@@ -35,7 +35,7 @@ section.decoration {
       background-image: url('../img/spot.png');
     }
   }
-  //!dec-strawberry ----------------------------------
+  //dec-strawberry ----------------------------------
   .dec-strawberry {
     display: none;
     @media screen and (min-width: 650px) {
@@ -57,7 +57,7 @@ section.decoration {
       background-image: url('../img/strawberry@1x.png');
     }
   }
-  //!dec-leaves ----------------------------------
+  //dec-leaves ----------------------------------
   .dec-leaves {
     display: none;
     @media screen and (min-width: 650px) {
@@ -81,7 +81,7 @@ section.decoration {
       background-image: url('../img/leaves@1x.png');
     }
   }
-  //!dec-banana ----------------------------------
+  //dec-banana ----------------------------------
   .dec-banana {
     display: none;
     @media screen and (min-width: 650px) {
@@ -103,7 +103,7 @@ section.decoration {
     }
   }
 }
-//? ======================LOGN PAGE =================================
+
 section.decoration-login {
   display: none;
   position: absolute;
@@ -112,15 +112,15 @@ section.decoration-login {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  @media screen and (min-width: 650px){
+  @media screen and (min-width: 650px) {
     display: block;
     min-height: 1024px;
     height: 100%;
   }
-  @media screen and (min-width: 650px){
+  @media screen and (min-width: 650px) {
     min-height: 850px;
   }
-  //?dec-spot ----------------------------------
+  //dec-spot ----------------------------------
   .dec-spot {
     display: none;
     @media screen and (min-width: 650px) {
@@ -141,7 +141,7 @@ section.decoration-login {
       background-image: url('../img/spot-login.png');
     }
   }
-  //?dec-strawberry ----------------------------------
+  //dec-strawberry ----------------------------------
   .dec-strawberry {
     display: none;
     @media screen and (min-width: 650px) {
@@ -162,7 +162,7 @@ section.decoration-login {
       background-image: url('../img/strawberry@1x.png');
     }
   }
-  //?dec-leaves ----------------------------------
+ 
   .dec-leaves {
     display: none;
     @media screen and (min-width: 650px) {
@@ -183,7 +183,7 @@ section.decoration-login {
       background-image: url('../img/leaves-login@1x.png');
     }
   }
-  //?dec-banana ----------------------------------
+//banana ----------------------------------
   .dec-banana {
     display: none;
     @media screen and (min-width: 650px) {
@@ -205,7 +205,7 @@ section.decoration-login {
     }
   }
 }
-//todo ======================CALCULATION PAGE =================================
+
 @media screen and (min-width: 320px) {
   section.decoration-calculation {
     position: absolute;
@@ -215,13 +215,7 @@ section.decoration-login {
     min-height: 1160px;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      #fff,
-      #fff 664px,
-      $secondary-beckground 664px,
-      $secondary-beckground 100%
-    );
+    background: linear-gradient(180deg, #fff, #fff 664px, $secondary-beckground 664px, $secondary-beckground 100%);
   }
 }
 
@@ -234,24 +228,9 @@ section.decoration-login {
     min-height: 1024px;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(
-      180deg,
-      #fff,
-      #fff 674px,
-      $secondary-beckground 674px,
-      $secondary-beckground 100%
-    );
+    background: linear-gradient(180deg, #fff, #fff 674px, $secondary-beckground 674px, $secondary-beckground 100%);
   }
-  // @include for-size(tablet) {
-  //   width: 270px;
-  //   position: absolute;
-  //   top: 13px;
-  //   right: 38px;
-  //   height: 362px;
 
-  //   background-image: url('../../img/rightSideBarBottom@1x.png');
-  //   background-repeat: no-repeat;
-  // }
   .dec-leaves {
     width: 362px;
     height: 369px;
@@ -279,7 +258,7 @@ section.decoration-login {
       $secondary-beckground 100%
     );
   }
-  
+
   .dec-leaves {
     width: 505px;
     height: 777px;

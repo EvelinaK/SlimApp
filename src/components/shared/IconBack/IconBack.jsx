@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./IconBack.module.scss";
+import React from 'react';
+import styles from './IconBack.module.scss';
 
 const IconBack = () => {
   return (
