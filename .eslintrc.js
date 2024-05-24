@@ -15,6 +15,12 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: [
+    'react',
+    new MiniCssExtractPlugin({
+      // ......
+      ignoreOrder: true
+    }),
+  ],
   rules: {},
 };
