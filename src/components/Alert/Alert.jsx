@@ -10,7 +10,7 @@ class Alert extends Component {
   };
   delayToCloseAlert = null;
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (this.props.state.error && this.props.state.error !== prevProps.state.error) {
       clearTimeout(this.delayToCloseAlert);
       this.setState((state) => ({ isAlertShow: true }));
